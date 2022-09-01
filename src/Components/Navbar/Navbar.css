@@ -1,0 +1,58 @@
+body{
+    margin: 0%;
+}
+
+#navbar{
+    display: flex;
+    background-color: black;
+    color: white;
+   
+
+}
+#search{
+  
+    margin-top: 20px;
+
+}
+#logo img {
+    width: 50%;
+    margin: 10px;
+}
+#search-input{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    width: 250px;
+}
+#option{
+    margin-left: 30px;
+}
+#list li{
+    display: inline-flex;
+    list-style: none;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+
+   
+}
+
+ a{
+   text-decoration: none;
+    color: white;
+
+   
+}
+
+#profile-img{
+    width: 20%;
+    margin-left: 300%;
+    border-radius: 50%;
+    margin-top: 10px;
+ 
+}
+#showCase{
+    width: 100%;
+    height: 900px;
+    background-color: rgb(246,248,250)
+}
