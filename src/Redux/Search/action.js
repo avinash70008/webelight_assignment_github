@@ -62,11 +62,11 @@ export const User_Search = (user) => async (dispatch) => {
   try {
     dispatch(loadings())
     await axios.get(
-    // `https://api.github.com/search/repositories?q=${user}&page={page}`,
-    `https://api.github.com/users/${user}`
+    `https://api.github.com/search/repositories?q=${user}&page={page}`,
+    //  `https://api.github.com/users/${user}`
     ).then((res) => {
       console.log('user from action', [res.data]);
-    dispatch({ type: USER_SEARCH, payload: [res.data] })
+    dispatch({ type: USER_SEARCH, payload: res.data.items })
    
 
     }).catch((errer) => {

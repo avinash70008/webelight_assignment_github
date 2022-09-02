@@ -98,6 +98,11 @@ export const Navbar = () => {
     const singleUser = useSelector((store)=>store.user)
     console.log('singleUse', singleUser);
     const [values, setValue] = useState("")
+   const [logo,setLogo] = useState("https://i.pinimg.com/originals/4f/88/32/4f8832629be791976d4407576798050f.jpg")
+
+
+
+
     console.log('usersfromcomp', users);
     function debouncing(argument) {
         let timer
@@ -131,13 +136,10 @@ export const Navbar = () => {
 
 
 
-
-
-
   
   return (
    
-       <div>
+    
    
     <div> 
 
@@ -160,20 +162,38 @@ export const Navbar = () => {
 
             </ul>
         </div>
+     
         <div id='profile'>
-           <img id='profile-img' src='{e.avatar_url}' alt='profile-logo'/>
+           <img className='profile-img' src={"logo"} alt='profile-logo'/>
            
         </div>
        
     </div>
-<div id='showCase'>Hello</div>
+<div id='showCase'>
+
+            <div>{users.map((e)=>(
+               
+                 <div style={{
+                    textAlign: "center",
+                    padding:"20px",
+                    height:"20px",
+                    width:"100%",
+                 }}>{e.name}</div>
+                
+            ))}</div>
+        
+
+</div>
 
 
 
     </div>
- </div> 
 
 
 
   )
+
+
+  
+
 }
