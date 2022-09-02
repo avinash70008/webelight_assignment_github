@@ -174,11 +174,26 @@ export const Navbar = () => {
             <div>{users.map((e)=>(
                
                  <div style={{
-                    textAlign: "center",
-                    padding:"20px",
-                    height:"20px",
-                    width:"100%",
-                 }}>{e.name}</div>
+                    // justifyContent:"space-evenly",
+                    padding:"50px",
+                    // height:"50px",
+                    width:"50%",
+                    border:"1px solid black",
+                    marginLeft:"30%",
+                    marginTop:"30px"
+                 }}>
+                    <div key={e.id}>
+                <div><img style={{
+                    height:"70px",
+                   
+                   justifyItems:"start"
+                }} src= {e.owner.avatar_url}/>
+                 <span style={{
+                  marginLeft:"40px"
+                 }}>{e.full_name}</span>
+                 </div>
+                 </div>
+                 </div>
                 
             ))}</div>
         
