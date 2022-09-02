@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
+import { legacy_createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import { reducer } from './Search/reducer'
 const rootReducer = combineReducers({
-  movies: reducer,
+  users: reducer,
 })
 const composeEnhancers =
   typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
@@ -10,4 +10,5 @@ const composeEnhancers =
     : compose
 const middleware = [thunk]
 const enhancer = composeEnhancers(applyMiddleware(...middleware))
-export const store = createStore(rootReducer, enhancer)
+
+export const store = legacy_createStore(rootReducer, enhancer)
